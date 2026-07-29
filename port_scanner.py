@@ -2,7 +2,7 @@ import socket
 
 user_ip = input("Enter your IP address:") 
 PORT_START = 1
-PORT_END = 100
+PORT_END = 1024
 
 for port in range(PORT_START, PORT_END + 1): 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a new socket object using the IPv4 address family and TCP protocol. 
