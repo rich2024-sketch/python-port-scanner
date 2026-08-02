@@ -2,12 +2,15 @@ import socket, argparse
 
 #create the parser object
 parser = argparse.ArgumentParser(description="Port Scanner")
+
+# add the arguments
 parser.add_argument("ip", help="IP address to scan")
 parser.add_argument("-p_S", "--start", type=int, help="Starting port range to scan (e.g., 1-100)")
 parser.add_argument("-p_E", "--end", type=int, help="Ending port range to scan (e.g., 1-100)")
-# parser.add_argument("-t", "--timeout", type=float, default=1.0, help="Timeout for socket connections (default: 1.0 seconds)")
 
+# parse the arguments
 args = parser.parse_args()
+
 
 def scan_ports(user_ip, port_start, port_end):
     open_ports = []
